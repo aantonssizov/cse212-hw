@@ -38,7 +38,7 @@ public class Node
         if (value == Data) return true;
 
         if (value < Data && Left is not null) return Left.Contains(value);
-        else if (Right is not null) return Right.Contains(value);
+        else if (value > Data && Right is not null) return Right.Contains(value);
 
         return false;
     }
